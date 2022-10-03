@@ -4,11 +4,153 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Getflix</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Red+Hat+Display:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/app.css">
+    <title>Getflix</title>
 </head>
+
 <body>
-    <h1>Getflix</h1>
+    <header id="header" class="header-container">
+        <span class="header-arrow inactive">&lt;</span>
+        <h1 class="header-title">Getflix</h1>
+        <h1 class="header-title header-title--categoryView inactive">Action</h1>
+
+        <form id="searchForm" class="header-searchForm">
+            <input type="text" placeholder="Advengers">
+            <button>🔍</button>
+        </form>
+    </header>
+
+    <section id="trendingPreview" class="trendingPreview-container">
+        <div class="trendingPreview-header">
+            <h2 class="trendingPreview-title">Trends</h2>
+            <button class="trendingPreview-btn">View more</button>
+        </div>
+
+        <article class="trendingPreview-movieList">
+            <div class="movie-container">
+                <img src="./img/poster-avengers-endgame.webp"
+                     class="movie-img"
+                     alt="Nombre de la película"
+                />
+            </div>
+
+            <div class="movie-container">
+                <img src="./img/poster-avengers-endgame.webp"
+                     class="movie-img"
+                     alt="Nombre de la película"
+                />
+            </div>
+
+            <div class="movie-container">
+                <img src="./img/poster-avengers-endgame.webp"
+                     class="movie-img"
+                     alt="Nombre de la película"
+                />
+            </div>
+        </article>
+    </section>
+
+    <section id="categoriesPreview" class="categoriesPreview-container">
+        <h2 class="categoriesPreview-title">Categories</h2>
+
+        <article class="categoriesPreview-list">
+            <div class="category-container">
+                <h3 id="id28" class="category-title">Romance</h3>
+            </div>
+
+            <div class="category-container">
+                <h3 id="id16" class="category-title">Drama</h3>
+            </div>
+
+            <div class="category-container">
+                <h3 id="id14" class="category-title">Action</h3>
+            </div>
+        </article>
+    </section>
+
+    <section id="genericList" class="genericList-container inactive">
+        <div class="movie-container">
+            <img src="./img/poster-avengers-endgame.webp"
+                 class="movie-img"
+                 alt="Nombre de la película"
+            />
+        </div>
+
+        <div class="movie-container">
+            <img src="./img/poster-avengers-endgame.webp"
+                 class="movie-img"
+                 alt="Nombre de la película"
+            />
+        </div>
+
+        <div class="movie-container">
+            <img src="./img/poster-avengers-endgame.webp"
+                 class="movie-img"
+                 alt="Nombre de la película"
+            />
+        </div>
+    </section>
+
+    <section id="movieDetail" class="movieDetail-container inactive">
+        <h1 class="movieDetail-title">Advengers: Endgame</h1>
+        <span class="movieDetail-score">7.6</span>
+        <p class="movieDetail-description">
+            Adrift in space with no food or water, Tony Stark sends a message to 
+            Pepper Potts as his oxygen supply starts to dwindle. Meanwhile, the 
+            remaining Avengers must figure out a way to bring back their 
+            vanquished allies for an epic showdown with Thanos.
+        </p>
+
+        <article class="categories-list">
+            <div class="category-container">
+                <h3 id="id28" class="category-title">Romance</h3>
+            </div>
+
+            <div class="category-container">
+                <h3 id="id16" class="category-title">Drama</h3>
+            </div>
+
+            <div class="category-container">
+                <h3 id="id14" class="category-title">Action</h3>
+            </div>
+        </article>
+
+        <article class="relatedMovies-container">
+            <h2 class="relatedMovies-title">Similar movies</h2>
+
+            <div class="relatedMovies-scrollContainer">
+                <div class="movie-container">
+                    <img
+                        src="./img/poster-avengers-endgame.webp" 
+                        class="movie-img"
+                        alt="Nombre de la película"
+                        />
+                </div>
+
+                <div class="movie-container">
+                    <img
+                        src="./img/poster-avengers-endgame.webp" 
+                        class="movie-img"
+                        alt="Nombre de la película"
+                        />
+                </div>
+
+                <div class="movie-container">
+                    <img
+                        src="./img/poster-avengers-endgame.webp" 
+                        class="movie-img"
+                        alt="Nombre de la película"
+                        />
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <footer>Made by Ivo Piccinini</footer>
 
     <script src="./src/secrets.js"></script>
     <script src="./src/main.js"></script>
