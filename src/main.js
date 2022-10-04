@@ -11,7 +11,7 @@ const api = axios.create({
 async function getTrendingMoviesPreview() {
     const { data } = await api('trending/movie/day');
     const movies = data.results;
-    
+
     movies.forEach(movie => {
         const trendingPreviewMoviesContainer = document.querySelector('#trendingPreview .trendingPreview-movieList');
 
@@ -50,7 +50,5 @@ async function getCategoriesPreview() {
         categoryContainer.appendChild(categoryTitle);
         previewCategoriesContainer.appendChild(categoryContainer);
     });
-}  
+}
 
-getTrendingMoviesPreview();
-getCategoriesPreview();
