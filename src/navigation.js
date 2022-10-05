@@ -71,7 +71,9 @@ function categoriesPage() {
 
     const [_, categoryData] = location.hash.split('='); // ['#category', 'id-name']
     const [categoryId, categoryName] = categoryData.split('-');
+
     headerCategoryTitle.innerHTML = categoryName;
+
     getMoviesByCategory(categoryId);
 }
 
@@ -90,7 +92,10 @@ function movieDetailsPage() {
     categoriesPreviewSection.classList.add('inactive');
     genericSection.classList.add('inactive');
     movieDetailSection.classList.remove('inactive');
-    
+
+    // ['#movie', 'movie-id']
+    const [_, movieId] = location.hash.split('=');
+    getMovieById(movieId);
 }
 
 function searchPage() {
