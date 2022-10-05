@@ -23,7 +23,7 @@ function createMovies(movies, container) {
           'src',
           'https://image.tmdb.org/t/p/w300' + movie.poster_path,
         );
-    
+
         movieContainer.appendChild(movieImg);
         container.appendChild(movieContainer);
       });
@@ -84,5 +84,12 @@ async function getMoviesBySearch(query) {
     });
     const movies = data.results;
   
+    createMovies(movies, genericSection);
+  } 
+
+async function getTrendingMovies() {
+    const { data } = await api('trending/movie/day');
+    const movies = data.results;
+
     createMovies(movies, genericSection);
   } 
